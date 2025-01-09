@@ -112,6 +112,11 @@ async def bet(ctx, amount: int, team: str):
     username = ctx.author.display_name
 
     try:
+        c.execute('SELECT amount FROM bets WHERE user_id = ?', (user_id,))
+        existing_bet = c.fetchone()
+        if existing_bet:
+            await ctx.send('You can only place one bet until the bets are cleared.')
+            return
         c.execute('SELECT balance FROM users WHERE user_id = ?', (user_id,))
         user =c.fetchone()
         if user is None:
