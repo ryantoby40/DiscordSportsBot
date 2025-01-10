@@ -25,7 +25,7 @@ A Discord bot that allows users to place bets on NBA games, check scores, view t
 
 1. **Clone the Repository**:
    ```bash
-   git clone [https://github.com/ryantoby40/DiscordSportsBot.git]
+   git clone https://github.com/ryantoby40/DiscordSportsBot.git
    ```
 2. **Install Dependencies**:
    ```bash
